@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nature</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    body{
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background:  linear-gradient(180deg,rgba(94, 209, 205, 1) 7%, rgba(210, 136, 219, 1) 38%, rgba(232, 232, 121, 1) 65%);
+    }
+    
+    .rainbow{
+      display: flex;
+      opacity: 0;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      top:25%;
+      right: -4%;
+      height: 80px;
+      width: 60px;
+      z-index: 2;
+      animation: rainbowform 4s linear 5s forwards;
+    }
+    .sun{
+      position: absolute;
+      top:60%;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle,rgb(240, 237, 52) 52%, orange 100%);
+      background-color: orange;
+      z-index: -5;
+      animation: sunrise 4s ease-in 2s forwards;
+
+    }
+    .cloud1{
+      position: absolute;
+      top: 45%; /* Move it higher */
+      left: 30%;
+      height: 10px;
+      width: 60px;
+      border-radius: 40px;
+      animation: cloudpart 4.5s linear 2s forwards;
+      background: linear-gradient(179deg,rgba(195, 34, 176, 1) 24%, rgba(253, 187, 45, 1) 100%);
+    }
+    .cloud2{
+       position: absolute;
+      top: 40%; /* Move it higher */
+      left: 60%;
+      height: 5px;
+      width: 20px;
+      border-radius: 40px;
+      background: linear-gradient(179deg,rgb(238, 100, 222) 52%, rgb(236, 199, 117) 100%);   
+    }
+    .cloud3{
+       position: absolute;
+      top: 40%; /* Move it higher */
+      left: 65%;
+      height: 11px;
+      width: 27px;
+      border-radius: 40px;
+      background: linear-gradient(179deg,rgba(195, 34, 176, 1) 24%, rgba(253, 187, 45, 1) 100%); 
+    }
+    
+    .oyster{
+      position: fixed;
+      bottom: 15px;
+      height: 2px;
+      width: 2px;
+    }
+    .seasand{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 25%;
+      background-color: rgb(193, 196, 61);
+    }
+    .layer1 {
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(0deg,rgba(25, 146, 148, 1) 29%, rgba(44, 162, 209, 1) 64%, rgba(36, 105, 179, 1) 100%);
+      clip-path: ellipse(85% 100% at 50% -50%);
+    }
+    .foam{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background-color:rgba(44, 162, 209, 1);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      animation: wave 4s ease-in-out alternate infinite;
+    }
+    .elli{
+      height: 100%;
+      width:20%;
+      border-radius:18% ;
+      border-top: 2px solid white;
+      margin: -2px;
+      background-color: rgb(62, 194, 247);
+      animation: sideway 2s linear alternate infinite;
+    }
+    @keyframes wave {
+      0%{height: 40%;}
+      25%{height: 38%;}
+      34%{height: 43%;}
+      50%{height: 30%;}
+      75%{height: 39%;}
+      88% {height: 30% ;}
+      93% {height: 24%;}
+      100%{height: 42%;}
+    }
+    @keyframes rainbowform {
+      0%   { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes sideway {
+      0% {transform: translateX(2px);}
+      32% {transform: translateX(1px);}
+      50% {transform: translateX(-2px);}
+      70% {transform: translateX(-1px);}
+      84% {transform: translateX(-1.5px);}
+      100% {transform: translateX(1.5px);}
+    }
+    @keyframes sunrise{
+      0% {transform: translateY(-2px);}
+      25% {transform: translateY(-3px);}
+      50% {transform: translateY(-6px);}
+      75% {transform: translateY(-9px);}
+      100% {transform: translateY(-12px);}      
+
+    }
+    @keyframes cloudpart{
+      0% {transform: translateX(0px);}
+      32% {transform: translateX(-3px);}
+      50% {transform: translateX(-4.9px);}
+      65% {transform: translateX(-5.6px);}
+      85% {transform: translateX(-6px);}
+      100% {transform: translateX(-7.4px);}     
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rainbow"><p>&#127752;</p>
+  </div>
+  <div class="cloud1"></div>
+  <div class="cloud2"></div>
+  <div class="cloud3"></div>
+  <div class="sun"></div>
+  <div class="seasand">
+    <div class="layer1">
+      <div class="foam">
+        <div class="elli"></div>
+        <div class="elli"></div>
+        <div class="elli"></div>
+        <div class="elli"></div>
+        <div class="elli"></div>
+        <div class="elli"></div>
+      </div>
+    </div>
+    <div class="oyster">&#129450;</div>
+  </div>
+  
+</body>
+</html>
